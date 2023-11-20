@@ -1,4 +1,8 @@
-sources:
+---
+- name: SSL decryption detected
+  hosts: all
+  ## Define our source for events
+  sources:
     - paloaltonetworks.panos.logs:
         host: 0.0.0.0
         port: 5000
@@ -10,4 +14,4 @@ sources:
 
       action:
         run_playbook:
-          name: "chatGTP-response.yml"
+          name: "chatGTP_respnse.yml"

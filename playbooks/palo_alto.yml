@@ -1,0 +1,13 @@
+sources:
+    - paloaltonetworks.panos.logs:
+        host: 0.0.0.0
+        port: 5000
+        type: decryption
+
+  rules:
+    - name: "Troubleshoot Decryption Failure"
+      condition: event.meta.log_type == "decryption"
+
+      action:
+        run_playbook:
+          name: "chatGTP-response.yaml"

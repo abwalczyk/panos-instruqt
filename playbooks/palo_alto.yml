@@ -10,4 +10,4 @@ sources:
 
       action:
         run_playbook:
-          name: "chatGTP-response.yaml"
+          name: "chatGTP-response.yml"
